@@ -1,0 +1,45 @@
+openapi: 3.0.1
+info:
+  title: Queue Runner API
+  version: "1.0.0"
+servers:
+  - url: https://YOUR_RENDER_URL
+paths:
+  /run-queue:
+    post:
+      summary: Run a batch of image generations
+      operationId: runQueue
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Queue'
+      responses:
+        '200':
+          description: Successful response
+components:
+  schemas:
+    Item:
+      type: object
+      properties:
+        id:
+          type: string
+        prompt:
+          type: string
+        seed:
+          type: integer
+        variations:
+          type: integer
+          default: 1
+    Queue:
+      type: object
+      properties:
+        queue_id:
+          type: string
+        global_prompt:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Item'

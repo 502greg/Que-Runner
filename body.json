@@ -1,0 +1,8 @@
+{
+  "queue_id": "urban-alley",
+  "global_prompt": "African American muscular male superhero, urban streetwear (hooded jacket, cargo pants, high-top sneakers, subtle armored details), glowing aura like graffiti/neon sparks, gritty New York alley atmosphere at night, cinematic realism.",
+  "items": [
+    {"id": "shot01", "prompt": "Wide shot of a dark New York alley behind a brick building, trash bins, graffiti, and a flickering neon sign.", "seed": 12345, "variations": 1},
+    {"id": "shot02", "prompt": "Medium shot: the superhero enters the alley, hood up, walking confidently.", "seed": 12345, "variations": 1}
+  ]
+}
